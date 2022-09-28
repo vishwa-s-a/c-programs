@@ -1,0 +1,37 @@
+1. for strings in c++ we have to use stoi() function to convert string containing number to int data type
+   example: 
+    int n,i;
+    string m;
+    cout<<"Enter the number "<<endl;
+    cin>>n;
+    cin>>m;
+    i=stoi(m);
+    cout<<"I am :"<<i+1;
+    output: 
+    12
+    13
+    I am :14
+2. To convert number to string, we use to_string() funtion.
+    example:
+    int n,i;
+    string m,x ;
+    cout<<"Enter the number "<<endl;
+    cin>>n;
+    cin>>m;
+    x=to_string(n);
+    cout<<"I am :"<<x;
+3. for using strcpy, strcat, strlen and other string functions we need to include<cstring> line
+    and to take array of characters instead of string directly.
+    code:
+    #include<iostream>
+    #include<cstring>
+    using namespace std;
+    int main()
+    {
+        //string a,b;
+        char a[50],b[50];
+        cin>>a;
+        strcpy(b,a);  //in brackets always remember (destination, source)
+        cout<<b;
+        return 0;
+    }
