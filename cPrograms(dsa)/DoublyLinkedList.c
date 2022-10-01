@@ -21,7 +21,7 @@ struct node *current = NULL;
 
 //is list empty
 bool isEmpty() {
-   return head == NULL;
+   return head == NULL?true:false;
 }
 
 int length() {
@@ -70,7 +70,6 @@ void displayBackward() {
       ptr = ptr->prev;
       
    }
-   printf("hi");
     printf(" ]");
 }
 
