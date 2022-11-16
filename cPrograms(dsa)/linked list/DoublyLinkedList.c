@@ -80,7 +80,7 @@ void insertFirst(int key, int data) {
    struct node *link = (struct node*) malloc(sizeof(struct node));
    link->key = key;
    link->data = data;
-	
+	// the order in which it is stated it should be executed in this order only
    if(isEmpty()) {
       //make it the last link
       last = link;

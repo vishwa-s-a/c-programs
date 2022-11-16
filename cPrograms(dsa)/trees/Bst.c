@@ -54,7 +54,94 @@ void Inorder(node * root)
         Inorder(root->right);
     }
 }
-
+//function used for counting the total nodes in the bst
+int tnodes=0;
+void totalNodes(node * t)
+{
+    if(t!=NULL)
+    {
+        totalNodes(t->left);
+        totalNodes(t->right);
+        tnodes++;
+    }
+}
+// function to count only the leaf nodes in bst
+int lnodes=0;
+void leafNodes(node *t)
+{
+    if(t!=NULL)
+    {
+        leafNodes(t->left);
+        if(t->left==NULL && t->right==NULL)
+        {
+            lnodes++;
+        }
+        leafNodes(t->right);
+    }
+}
+// abdul baris function for counting the nodes
+int count(node *t)
+{
+    int x,y;
+    if(t!=NULL){
+        x=count(t->left);
+        y=count(t->right);
+        return x+y+1;
+    }
+    else
+    return 0;
+    //instead of above code we can also use these below lines
+    /*
+    if(t)
+        return count(t->left)+count(t->right)+1;
+    return 0;
+    */
+}
+// abdul baris function for counting the nodes with degree 2
+int count2(node *t)
+{
+    int x,y;
+    if(t!=NULL)
+    {
+        x=count2(t->left);
+        y=count2(t->right);
+        if(t->left && t->right)//if both children are there for the particular node then only it is counted
+            return x+y+1;
+        else 
+            return x+y;
+    }
+    else
+        return 0;
+}
+// abdul baris function for adding all the values present in the nodes is
+int count3(node *t)
+{
+    int x,y;
+    if(t!=NULL)
+    {
+        x=count3(t->left);
+        y=count3(t->right);
+        return x+y+t->data;
+    }
+    else
+        return 0;
+}
+//abdul baris function to find the height of the tree
+int height(node *t)
+{
+    int x,y;
+    if(t!=NULL)
+    {
+        x=height(t->left);
+        y=height(t->right);
+        if(x>y)
+            return x+1;
+        else 
+            return y+1;
+    }
+    else
+        return 0;
+}
 int findMin(node * t)
 {
     if(!t->left)// when null comes then it becomes true
@@ -118,7 +205,8 @@ int main()
         printf("\n4. Traverse in Preorder");
         printf("\n5. Traverse in Postorder");
         printf("\n6. Deletion in BST");
-        printf("\n7. Exit\n");
+        printf("\n7. Exit");
+        printf("\n8. To count the total nodes and leaf nodes\n");
         printf("First try to create a BST then you can try other operations\n");
         printf("\nEnter Choice: ");
         scanf("%d",&choice);
@@ -174,6 +262,16 @@ int main()
             case 7:
             printf("\n\nTerminating \n\n");
             goto end;
+
+            case 8:
+            totalNodes(root);
+            printf("The number of total nodes is: %d\n",tnodes);
+            printf("Total nodes is : %d\n",count(root));
+            leafNodes(root);
+            printf("The number of leaf nodes is: %d\n",lnodes);
+            printf("Height of the tree is: %d\n",height(root));
+
+            break;
 
             default:
             printf("\n\nInvalid Option!!! Try again!!\n\n");

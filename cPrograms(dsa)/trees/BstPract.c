@@ -47,6 +47,31 @@ void Inorder(node * t)
         Inorder(t->right);
     }
 }
+//function used for counting the total nodes in the bst
+int tnodes=0;
+void totalNodes(node * t)
+{
+    if(t!=NULL)
+    {
+        totalNodes(t->left);
+        totalNodes(t->right);
+        tnodes++;
+    }
+}
+// function to count only the leaf nodes in bst
+int lnodes=0;
+void leafNodes(node *t)
+{
+    if(t!=NULL)
+    {
+        leafNodes(t->left);
+        if(t->left==NULL && t->right==NULL)
+        {
+            lnodes++;
+        }
+        leafNodes(t->right);
+    }
+}
 void Preorder(node *t)
 {
 

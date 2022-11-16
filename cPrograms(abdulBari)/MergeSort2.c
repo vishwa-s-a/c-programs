@@ -1,4 +1,5 @@
 #include<stdio.h>
+// merge sort in recursive form
 void Merge(int a[],int l, int mid, int h)
 {
     int i=l,j=mid+1,k=l;

@@ -1,4 +1,5 @@
 #include<stdio.h>
+// merge sort using iterative method
 void Merge(int a[],int l, int mid, int h)
 {
     int i=l,j=mid+1,k=l;
