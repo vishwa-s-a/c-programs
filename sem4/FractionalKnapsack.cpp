@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include<stdio.h>
 using namespace std;
 struct item{
     int weight,value;
@@ -51,6 +50,6 @@ int main()
     int N=sizeof(arr)/sizeof(arr[0]);//gets the length of the array 
 
     //making the function call
-    cout<<fractionalKnapsack(W,arr,N);
+    cout<<fractionalKnapsack(W,arr,N)<<endl;
     return 0;
 }
