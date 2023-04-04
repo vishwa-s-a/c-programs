@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 int i,j,m,n,LCS_table[20][20];
-char S1[20]="abcdefghij",S2[20]="cdgi",b[20][20];
+char S1[20]="betacorona",S2[20]="sarbecov",b[20][20];
 
 void IcsAlgo(){
     m=strlen(S1);
@@ -54,6 +54,7 @@ void IcsAlgo(){
 
 int main()
 {
+    printf("Name:Vishwa Shivanand Appaji\nReg No:21BCI0026\n");
     IcsAlgo();
     printf("\n");
 }

@@ -39,6 +39,7 @@ long karatsuba(long x, long y)
 int main()
 {
     long a,b;
+    printf("Name: Vishwa Shivanand Appaji\nReg No:21BCI0026\n");
     printf("Enter the number which has to be multiplied: ");
     scanf("%ld,%ld",&a,&b);
     printf("product of 2 numbers is :%ld\n",karatsuba(a,b));
