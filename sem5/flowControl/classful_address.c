@@ -10,7 +10,7 @@ typedef struct
 } IPAddress;
 void getClassfulAddressInfo(IPAddress address)
 {
-    if (address.first_octet >= 1 && address.first_octet <= 126)
+    if (address.first_octet >= 1 && address.first_octet <= 127)
     {
         printf("Class A Address: %d.%d.%d.%d\n", address.first_octet, address.second_octet, address.third_octet, address.fourth_octet);
     }
@@ -37,6 +37,7 @@ void getClassfulAddressInfo(IPAddress address)
 }
 int main()
 {
+    printf("Name: Vishwa Shivanand Appaji\nReg No:21BCI0026\n");
     IPAddress address;
     printf("Enter IP Address (format: xxx.xxx.xxx.xxx): ");
     scanf("%d.%d.%d.%d", &address.first_octet, &address.second_octet, &address.third_octet, &address.fourth_octet);

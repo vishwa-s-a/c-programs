@@ -36,6 +36,7 @@ void splitIPAddress(char ip[])
 }
 int main()
 {
+    printf("Name: Vishwa Shivanand Appaji\nReg No:21BCI0026\n");
     char ipAddress[20];
     printf("Enter IP address in x.y.z.t/n format: ");
     scanf("%s", ipAddress);

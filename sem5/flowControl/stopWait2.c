@@ -36,7 +36,7 @@ void success(){
             printf("rn: %d\n",rn);
 }
 int main(){
-    
+    printf("Name: Vishwa Shivanand Appaji\nReg No:21BCI0026\n");
     while(i<totalFrames)
     {
         if(i<2){//2 frames are sent successfully

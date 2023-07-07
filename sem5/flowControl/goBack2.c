@@ -38,6 +38,7 @@ void receiver(bool timer)
 }
 int main()
 {
+    printf("Name: Vishwa Shivanand Appaji\nReg No:21BCI0026\n");
     int i = 0, j = 0;
     printf("Enter the window size: ");
     scanf("%d", &windowSize);

@@ -45,6 +45,7 @@ void cummalitiveAck()
     rn=frame;
 }
 int main(){
+    printf("Name: Vishwa Shivanand Appaji\nReg No:21BCI0026\n");
     int i = 0, j = 0;
     printf("Enter the value of m: ");
     scanf("%lf",&m);
